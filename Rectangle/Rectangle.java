@@ -21,8 +21,8 @@ public class Rectangle {
 
 
         }
-        if (width != height) {
-            System.out.println("Создан прямоугольник с параметрами:");
+        if (width != height && width == 0 || width != height && height == 0) {
+            System.out.println("Создан Квадрат с параметрами:");
             System.out.println("Ширина = " + width);
             System.out.println("Высота = " + height);
             System.out.println("Верхняя координата = " + top);
@@ -48,11 +48,12 @@ public class Rectangle {
         this.width = width;
         this.left = left;
         this.top = top;
-        System.out.println("Создан квадрат с параметрами:");
-        System.out.println("Ширина = " + width);
-        System.out.println("Верхняя координата = " + top);
-        System.out.println("Левая координата = " + left);
-        System.out.println("--------------------------------------");
+            System.out.println("Создана квадрат с параметрами:");
+            System.out.println("Вехняя координата = " + top);
+            System.out.println("Левая координата = " + left);
+            System.out.println("Ширина = " + width);
+            System.out.println("Т.К Высота не задана.");
+            System.out.println("--------------------------------------");
 
 
     }
@@ -73,12 +74,6 @@ public class Rectangle {
             System.out.println("Левая координата = " + rectangle.left);
             System.out.println("--------------------------------------");
 
-        } else if (rectangle.height == rectangle.width && rectangle.height != 0 && rectangle.top > 0 && rectangle.left > 0) {
-            System.out.println("Создан квадрат с параметрами:");
-            System.out.println("Ширина = " + rectangle.width);
-            System.out.println("Верхняя координата = " + rectangle.top);
-            System.out.println("Левая координата = " + rectangle.left);
-            System.out.println("--------------------------------------");
 
 
         } else if (rectangle.height == 0 && rectangle.width == 0 && rectangle.top > 0 && rectangle.left > 0) {
@@ -91,6 +86,7 @@ public class Rectangle {
             System.out.println("Создана квадрат с параметрами:");
             System.out.println("Вехняя координата = " + rectangle.top);
             System.out.println("Левая координата = " + rectangle.left);
+            System.out.println("Ширина = " + rectangle.width);
             System.out.println("Т.К Высота не задана.");
             System.out.println("--------------------------------------");
 
@@ -99,11 +95,12 @@ public class Rectangle {
             System.out.println("Создана квадрат с параметрами:");
             System.out.println("Вехняя координата = " + rectangle.top);
             System.out.println("Левая координата = " + rectangle.left);
+            System.out.println("Высота = " + rectangle.height);
             System.out.println("Т.К Ширина не задана.");
             System.out.println("--------------------------------------");
-        } else if (rectangle.height == rectangle.width  && rectangle.top == 0 && rectangle.left == 0 && rectangle.height > 0 ) {
+        } else if ( rectangle.width > 0  && rectangle.top == 0 && rectangle.left == 0 && rectangle.height == 0 || rectangle.width == 0   && rectangle.top == 0 && rectangle.left == 0  ) {
             System.out.println("Создана квадрат с параметрами:");
-            System.out.println("Высота  = " + rectangle.height + " Равна Ширине");
+            System.out.println("Высота  = " + rectangle.height + "  Ширина = " + rectangle.width );
             System.out.println("Верхняя и Левая точка не задана");
             System.out.println("--------------------------------------");
         }
